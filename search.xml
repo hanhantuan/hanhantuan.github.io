@@ -4,23 +4,25 @@
   
     
     <entry>
-      <title>testmyhexo</title>
-      <link href="/test/test-my-hexo.html"/>
-      <url>/test/test-my-hexo.html</url>
+      <title>Java实现一个小游戏</title>
+      <link href="/java/java-ball-game.html"/>
+      <url>/java/java-ball-game.html</url>
       
-        <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><a id="more"></a><p>表达一些比较复杂的数学公式：<br>$$<br>f(a)=\dfrac{1}{2\pi i}\oint_{\gamma}\dfrac{f(z)}{z-a}dz<br>$$</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>利用高中的数学知识,实现一个小小的游戏,提高学习Java的兴趣.</p><a id="more"></a><h2 id="一、代码实现"><a href="#一、代码实现" class="headerlink" title="一、代码实现"></a>一、代码实现</h2><p>这篇博文是为了提高学习Java的兴趣，正常的程序都是运行在黑黑的命令行窗口，难免会打击学习兴趣。</p><p>下面先来看代码：</p><pre><code class="java">import java.awt.*;import javax.swing.*;public class BallGame extends JFrame {    Image ball = Toolkit.getDefaultToolkit().getImage("images/ball.png");    Image desk = Toolkit.getDefaultToolkit().getImage("images/table.jpg");    double x = 200;    double y = 200;    double digree = 3.14/3;    //绘画    public void paint(Graphics g){        System.out.println("Graphic is ready!!!");        g.drawImage(desk,0,0,null);        g.drawImage(ball,(int)x,(int)y,null);        //用到数学知识的地方        x = x + 10 * Math.cos(digree);        y = y + 10 * Math.sin(digree);        //碰到上下左右边界        if (y &gt; 501-40-30 || y &lt; 40+40) {            digree = -digree;        }        if (x&gt;856-40-30 || x &lt; 40) {            digree = 3.14 - digree;        }    }    //创建窗口    void launchFrame(){        setSize(856,501);        setLocation(100,100);        setVisible(true);        //实现动画，每秒绘制25次        while (true) {            repaint();            try {                Thread.sleep(40);            } catch (InterruptedException e) {                // TODO Auto-generated catch block                e.printStackTrace();            }  //1s=1000ms,大约1秒绘制1000/40=25        }    }    public static void main(String args[]){        System.out.println("Game is on!!!");        BallGame game = new BallGame();        game.launchFrame();    }}</code></pre><h2 id="二、目标"><a href="#二、目标" class="headerlink" title="二、目标"></a>二、目标</h2><ol><li>找到敲代码的感觉；</li><li>收获程序成功的成就感；</li><li>掌握Java的代码结构。</li></ol><h2 id="三、后记"><a href="#三、后记" class="headerlink" title="三、后记"></a>三、后记</h2><p>本程序所用图片：<img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/ball.png" alt="ball.png"></p><p><img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/table.jpg" alt="table.jpg"></p><p>程序参考：<a href="https://www.sxt.cn/Java_jQuery_in_action/Billiards_Games.html" target="_blank" rel="noopener">https://www.sxt.cn/Java_jQuery_in_action/Billiards_Games.html</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
           
-          <category> test </category>
+          <category> Java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test </tag>
+            <tag> Java </tag>
+            
+            <tag> Game </tag>
             
         </tags>
       

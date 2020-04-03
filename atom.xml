@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一只憨憨团</title>
+  
+  <subtitle>学习搞起来</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://hanhantuan.cn/"/>
+  <updated>2020-04-03T08:50:35.651Z</updated>
+  <id>http://hanhantuan.cn/</id>
+  
+  <author>
+    <name>憨憨团</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java实现一个小游戏</title>
+    <link href="http://hanhantuan.cn/java/java-ball-game.html"/>
+    <id>http://hanhantuan.cn/java/java-ball-game.html</id>
+    <published>2020-04-03T08:23:57.000Z</published>
+    <updated>2020-04-03T08:50:35.651Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;利用高中的数学知识,实现一个小小的游戏,提高学习Java的兴趣.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="http://hanhantuan.cn/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://hanhantuan.cn/tags/Java/"/>
+    
+      <category term="Game" scheme="http://hanhantuan.cn/tags/Game/"/>
+    
+  </entry>
+  
+</feed>
