@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>testmyhexo</title>
+      <link href="/test/test-my-hexo.html"/>
+      <url>/test/test-my-hexo.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><a id="more"></a><p>表达一些比较复杂的数学公式：<br>$$<br>f(a)=\dfrac{1}{2\pi i}\oint_{\gamma}\dfrac{f(z)}{z-a}dz<br>$$</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
