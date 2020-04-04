@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hanhantuan.cn/"/>
-  <updated>2020-04-04T03:07:28.667Z</updated>
+  <updated>2020-04-04T08:54:52.015Z</updated>
   <id>http://hanhantuan.cn/</id>
   
   <author>
@@ -17,15 +17,22 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Java实现一个小游戏</title>
-    <link href="http://hanhantuan.cn/java/java-ball-game.html"/>
-    <id>http://hanhantuan.cn/java/java-ball-game.html</id>
-    <published>2020-04-03T08:23:57.000Z</published>
-    <updated>2020-04-04T03:07:28.667Z</updated>
+    <title>Java的简单游戏的实现</title>
+    <link href="http://hanhantuan.cn/java/java-new-game.html"/>
+    <id>http://hanhantuan.cn/java/java-new-game.html</id>
+    <published>2020-04-04T05:39:09.000Z</published>
+    <updated>2020-04-04T08:54:52.015Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;利用高中的数学知识,实现一个小小的游戏,提高学习Java的兴趣.&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;游戏开始&quot;&gt;&lt;a href=&quot;#游戏开始&quot; class=&quot;headerlink&quot; title=&quot;游戏开始&quot;&gt;&lt;/a&gt;游戏开始&lt;/h2&gt;&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-java&quot;&gt;&lt;code
+        
+      
     
     </summary>
     
