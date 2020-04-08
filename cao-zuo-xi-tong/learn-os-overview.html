@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java的简单游戏的实现, 一只憨憨团">
+    <meta name="keywords" content="计算机操作系统-概述, 一只憨憨团">
     <meta name="description" content="数学科学学院 | 信息与计算科学">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java的简单游戏的实现 | 一只憨憨团</title>
+    <title>计算机操作系统-概述 | 一只憨憨团</title>
     <link rel="icon" type="image/png" href="/angry_birds-32PX.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/cover_img/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java的简单游戏的实现</h1>
+                    <h1 class="description center-align post-title">计算机操作系统-概述</h1>
                 </div>
             </div>
         </div>
@@ -416,12 +416,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
-                            </a>
-                        
-                            <a href="/tags/Game/">
-                                <span class="chip bg-color">Game</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -432,8 +428,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
                             </a>
                         
                     </div>
@@ -445,21 +441,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    221
+                    343
                 </div>
                 
 
@@ -482,63 +478,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="游戏开始"><a href="#游戏开始" class="headerlink" title="游戏开始"></a>游戏开始</h2><p>代码如下：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
-<span class="token keyword">import</span> javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+                <div align="center">
+    <img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/os.png" width="1000px" height="500px">
+</div>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BallGame</span> <span class="token keyword">extends</span> <span class="token class-name">JFrame</span> <span class="token punctuation">{</span>
-    Image ball <span class="token operator">=</span> Toolkit<span class="token punctuation">.</span><span class="token function">getDefaultToolkit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getImage</span><span class="token punctuation">(</span><span class="token string">"images/ball.png"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Image desk <span class="token operator">=</span> Toolkit<span class="token punctuation">.</span><span class="token function">getDefaultToolkit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getImage</span><span class="token punctuation">(</span><span class="token string">"images/table.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">double</span> x <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
-    <span class="token keyword">double</span> y <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
-    <span class="token keyword">double</span> digree <span class="token operator">=</span> <span class="token number">3.14</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">;</span>
 
-    <span class="token comment" spellcheck="true">//绘画</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">paint</span><span class="token punctuation">(</span>Graphics g<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Graphic is ready!!!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        g<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>desk<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        g<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>ball<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>x<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>y<span class="token punctuation">,</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//用到数学知识的地方</span>
-        x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">10</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span>digree<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        y <span class="token operator">=</span> y <span class="token operator">+</span> <span class="token number">10</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span>digree<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="什么是操作系统"><a href="#什么是操作系统" class="headerlink" title="什么是操作系统"></a>什么是操作系统</h2><p>首先，计算机系统是由硬件和软件组成的，其中的硬件包含运算器、控制器、存储器以及输入输出设备，而软件部分就有操作系统。</p>
+<div align="center">
+    <img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/computer.png" width="500px">
+</div>
 
-        <span class="token comment" spellcheck="true">//碰到上下左右边界</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>y <span class="token operator">></span> <span class="token number">501</span><span class="token operator">-</span><span class="token number">40</span><span class="token operator">-</span><span class="token number">30</span> <span class="token operator">||</span> y <span class="token operator">&lt;</span> <span class="token number">40</span><span class="token operator">+</span><span class="token number">40</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            digree <span class="token operator">=</span> <span class="token operator">-</span>digree<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">></span><span class="token number">856</span><span class="token operator">-</span><span class="token number">40</span><span class="token operator">-</span><span class="token number">30</span> <span class="token operator">||</span> x <span class="token operator">&lt;</span> <span class="token number">40</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            digree <span class="token operator">=</span> <span class="token number">3.14</span> <span class="token operator">-</span> digree<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">//创建窗口</span>
-    <span class="token keyword">void</span> <span class="token function">launchFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">856</span><span class="token punctuation">,</span><span class="token number">501</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">setLocation</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">//实现动画，每秒绘制25次</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">repaint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">try</span> <span class="token punctuation">{</span>
-                Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// TODO Auto-generated catch block</span>
-                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>  <span class="token comment" spellcheck="true">//1s=1000ms,大约1秒绘制1000/40=25</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Game is on!!!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        BallGame game <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BallGame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        game<span class="token punctuation">.</span><span class="token function">launchFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>大家尽量手敲代码哦~</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>需要的图片：<br><img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/ball.png" alt="ball.png"><br><img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/table.jpg" alt="table.jpg"><br>程序参考：<a href="https://www.sxt.cn/Java_jQuery_in_action/Billiards_Games.html" target="_blank" rel="noopener">https://www.sxt.cn/Java_jQuery_in_action/Billiards_Games.html</a></p>
+<p>由上图可以看出操作系统是运行在硬件基础上的第一层软件，是对硬件功能的首次扩充，也是其他软件和硬件之间的接口。</p>
+<p>那么最终定义：操作系统是一种系统软件，他是用户与计算机设备间的桥梁，是软件与硬件的接口，它负责计算机全部软、硬件资源的调度、分配，实现信息的存取保护，合理组织计算机工作流程，以方便用户的程序集合。</p>
+<h4 id="裸机和虚拟机"><a href="#裸机和虚拟机" class="headerlink" title="裸机和虚拟机"></a>裸机和虚拟机</h4><ul>
+<li>裸机就是不加任何软件扩充的计算机的硬件</li>
+<li>一个裸机在没加上一层软件后，就变成了功能更强的机器，这种“功能更强的机器”就是虚拟机</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>用户与计算机硬件系统间的接口<ul>
+<li>用户如果要使用计算机必须通过操作系统</li>
+</ul>
+</li>
+<li>扩展的机器<ul>
+<li>操作系统隐藏了硬件细节，向用户提供虚拟机，方便用户使用</li>
+</ul>
+</li>
+<li>资源管理者<ul>
+<li>对各种硬件及软件资源的管理</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -564,7 +534,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hanhantuan.cn/java/java-new-game.html">http://hanhantuan.cn/java/java-new-game.html</a>
+                    <a href="http://hanhantuan.cn/cao-zuo-xi-tong/learn-os-overview.html">http://hanhantuan.cn/cao-zuo-xi-tong/learn-os-overview.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -602,12 +572,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
-                                </a>
-                            
-                                <a href="/tags/Game/">
-                                    <span class="chip bg-color">Game</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -773,9 +739,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/cao-zuo-xi-tong/learn-os-overview.html">
                     <div class="card-image">
@@ -792,9 +759,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -807,6 +774,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -822,7 +790,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/java/java-new-game.html">
@@ -856,7 +824,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
