@@ -448,21 +448,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-08
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    343
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -509,6 +509,69 @@
 </ul>
 </li>
 </ul>
+<h2 id="操作系统的分类和发展"><a href="#操作系统的分类和发展" class="headerlink" title="操作系统的分类和发展"></a>操作系统的分类和发展</h2><h3 id="操作系统发展"><a href="#操作系统发展" class="headerlink" title="操作系统发展"></a>操作系统发展</h3><div align="center">
+    <img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/OSDevelopent.png" width="600px">
+</div>
+
+<h3 id="操作系统分类"><a href="#操作系统分类" class="headerlink" title="操作系统分类"></a>操作系统分类</h3><ul>
+<li>批处理操作系统（指多道批处理，单道批处理）</li>
+<li>分时系统</li>
+<li>实时操作系统</li>
+<li>个人计算机操作系统</li>
+<li>网络操作系统</li>
+<li>分布式操作系统</li>
+<li>多处理机操作系统</li>
+<li>嵌入式操作系统</li>
+</ul>
+<h4 id="批处理操作系统"><a href="#批处理操作系统" class="headerlink" title="批处理操作系统"></a>批处理操作系统</h4><p>它的特点就是宏观并行、微观串行（各作业交替执行）</p>
+<div align="center">
+    <img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/MultiChannelBanchProcessingSystem.png" width="600px">
+</div>
+
+<p>它的优点是作业流程自动化，资源利用率高；</p>
+<p>缺点同样明显，没有交互手段，调试程序困难，作业周转时间长</p>
+<h4 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h4><p><img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/TimeSharingSystem.jpg" alt=""></p>
+<p>为了解决批处理系统中无交互手段，调试程序困难等缺点，出现了分时系统。</p>
+<p>它的特点就是及时接收、及时处理、及时响应。它有一台主机连接若干终端，并且采用了时间片轮转法，使得一台主机同时为多用户服务，且保证足够快的响应时间。</p>
+<p>典型的分时系统就是UNIX。</p>
+<h5 id="时间片轮转法"><a href="#时间片轮转法" class="headerlink" title="时间片轮转法"></a>时间片轮转法</h5><p>操作系统以时间片为单位，轮流为每个终端用户服务，每次服务一个时间片。其实就是利用了人的错觉，让人感觉不到而已。</p>
+<h4 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h4><p>能及时响应外部请求，在规定时限内完成对该事件的处理。它的及时响应比分时系统更加严格，而且要更加可靠。它主要分类是：</p>
+<ul>
+<li>实施过程控制系统<ul>
+<li>工业控制、军事控制</li>
+</ul>
+</li>
+<li>实时通信（信息）处理系统<ul>
+<li>银行，飞机订票、股市行情</li>
+</ul>
+</li>
+<li>多媒体系统</li>
+<li>嵌入式系统</li>
+</ul>
+<p>实时系统总是和先进的技术装备相结合。</p>
+<h4 id="个人计算机操作系统"><a href="#个人计算机操作系统" class="headerlink" title="个人计算机操作系统"></a>个人计算机操作系统</h4><p>这个主要是追求界面友好，使用方便，例如，正在使用的Windows系统。</p>
+<h4 id="网络操作系统"><a href="#网络操作系统" class="headerlink" title="网络操作系统"></a>网络操作系统</h4><p><img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/InternetSystem.png" alt=""></p>
+<p>这个是基于计算机网络，在各种计算机操作系统上按网络体系结构协议标准开发的软件，包括网络管理，通信，安全，资源共享和各种网络应用，这个是要实现相互通信及资源共享。</p>
+<div align="center">
+    <img src="https://hanhantuanblogimages.oss-cn-beijing.aliyuncs.com/blog_img/InternetOS.png" width="600px">
+</div>
+
+<h2 id="操作系统的特征"><a href="#操作系统的特征" class="headerlink" title="操作系统的特征"></a>操作系统的特征</h2><h3 id="并发性"><a href="#并发性" class="headerlink" title="并发性"></a>并发性</h3><ul>
+<li>并发是指系统中存在着若干个逻辑上相互独立的程序或程序段，它们都已经被启动执行，而且都还没完成执行。即指两个或两个以上事件在同一时间间隔内发生。</li>
+<li>并行性是指两个或多个事件在同一时刻发生。并行执行就是同时执行。<ul>
+<li>并行是一种物理的或微观的同时性概念</li>
+<li>并发是一种逻辑的或宏观的同时性概念</li>
+</ul>
+</li>
+</ul>
+<h3 id="共享性"><a href="#共享性" class="headerlink" title="共享性"></a>共享性</h3><p>共享是指系统中硬件和软件资源可为多个用户同时使用（互斥共享、同时访问）。</p>
+<ul>
+<li>互斥共享：指某个资源在一段时间内只允许一个作业使用，这种资源称临界资源。</li>
+<li>同时共享：指某个资源在一段时间内允许多个作业同时使用。这里的同时的概念是宏观的，微观上则可能交替地对资源进行访问。</li>
+</ul>
+<p>并发和共享互为存在条件，并发执行导致资源共享，提供资源共享才能达到真正的并发执行。所以说，并发和共享是OS两个最基本的特征。</p>
+<h3 id="虚拟性"><a href="#虚拟性" class="headerlink" title="虚拟性"></a>虚拟性</h3><p>指通过某种技术，是物理上的一个实体变成逻辑上的多个对应物。前者是实的，后者是虚的，如虚拟处理机。</p>
+<h3 id="异步性"><a href="#异步性" class="headerlink" title="异步性"></a>异步性</h3><p>多道程序环境下，系统中并发执行的进程，由于资源等因素的限制，其执行是走走停停的，故内存中的多个进程均按照各自独立的、不可预知的速度想抢推进。但只要运行环境相同，作业虽经多次运行，都会得到完全相同的结果。</p>
 
             </div>
             <hr/>
@@ -1021,7 +1084,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">564</span>&nbsp;字
+                class="white-color">1.6k</span>&nbsp;字
             
             
             
